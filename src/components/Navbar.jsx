@@ -1,5 +1,5 @@
 import React from 'react'   
-import { navLinks } from '#constants/index.js'
+import { navIcons, navLinks } from '#constants'
 
 const Navbar = () => {
 
@@ -13,6 +13,15 @@ const Navbar = () => {
                     {navLinks.map(({id, name}) => (
                         <li key={id}>
                            <p>{name}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div className="">
+                <ul>
+                    {navIcons.map(({id, image}) => (
+                        <li key={id}>
+                            <img src={image} alt={`icon-${id}`} className='icon-hover '/>
                         </li>
                     ))}
                 </ul>
