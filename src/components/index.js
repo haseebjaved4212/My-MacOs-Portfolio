@@ -1,3 +1,4 @@
-import { Welcome , Navbar } from "#components";
+import { Welcome , Navbar , Dock } from "#components";
 
-export { Welcome, Navbar };
+
+export { Welcome, Navbar , Dock };
