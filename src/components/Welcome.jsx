@@ -1,114 +1,53 @@
 import React, { useRef } from 'react'
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
+import useVariableFontHover from '../hooks/useVariableFontHover';
 
-
-
-
-const FONT_WEIGHTS = {
-  subtitle: {
-    min: 100,
-    max: 700,
-    default: 100,
-  },
-  title: {
-    min: 400,
-    max: 800,
-    default: 400,
-  }
+const renderText = (text, className) => {
+  return (
+    <span aria-label={text} className={className} style={{ display: 'inline-block' }}>
+      {[...text].map((char, index) => (
+        <span
+          key={index}
+          className="hover-char"
+          aria-hidden="true"
+          style={{
+            display: 'inline-block',
+            // Default styling handled by hook or CSS, but setting initial state here is good
+            transition: 'color 0.2s',
+          }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
+      ))}
+    </span>
+  );
 }
-const renderText = (text, className, baseWeight = 400) => {
-  return [...text].map((char, index) => {
-    return (
-      <span
-        key={index}
-        className={className}
-        style={{
-          fontWeight: baseWeight,
-          display: 'inline-block'
-        }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </span>
-    )
-  })
-}
-
-const setupTextHover = (container, type) => {
-  if (!container) return;
-
-  const letters = container.querySelectorAll("span");
-  const { min, max, default: defaultWeight } = FONT_WEIGHTS[type];
-
-  const handleMouseMove = (e) => {
-    const mouseX = e.clientX;
-
-    letters.forEach((letter) => {
-      const { left, width } = letter.getBoundingClientRect();
-      const letterCenter = left + width / 2;
-      const distance = Math.abs(mouseX - letterCenter);
-
-      // Calculate intensity based on distance (sigma approx 100px -> 10000)
-      const intensity = Math.exp(-(distance * distance) / 10000);
-      const targetWeight = min + (max - min) * intensity;
-
-      gsap.to(letter, {
-        fontWeight: targetWeight,
-        color: intensity > 0.5 ? 'white' : '#e5e7eb', // e5e7eb is gray-200
-        duration: 0.25,
-        ease: "power2.out",
-        overwrite: 'auto'
-      });
-    });
-  };
-
-  const handleMouseLeave = () => {
-    // Batch animate all letters for better performance and synchronization
-    gsap.to(letters, {
-      fontWeight: defaultWeight,
-      color: '#e5e7eb',
-      duration: 0.5,
-      ease: "power2.out",
-      overwrite: true // Force overwrite of any ongoing mousemove animations
-    });
-  };
-
-  container.addEventListener("mousemove", handleMouseMove);
-  container.addEventListener("mouseleave", handleMouseLeave);
-
-  // Return cleanup function
-  return () => {
-    container.removeEventListener("mousemove", handleMouseMove);
-    container.removeEventListener("mouseleave", handleMouseLeave);
-  };
-};
-
 
 const Welcome = () => {
-
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
 
-  useGSAP(() => {
-    const cleanupTitle = setupTextHover(titleRef.current, "title");
-    const cleanupSubtitle = setupTextHover(subtitleRef.current, "subtitle");
+  // Initialize custom hooks
+  useVariableFontHover(titleRef, "title");
+  useVariableFontHover(subtitleRef, "subtitle");
 
-    return () => {
-      if (cleanupTitle) cleanupTitle();
-      if (cleanupSubtitle) cleanupSubtitle();
-    }
-  }, []);
   return (
-    <section className='' id='welcome'>
-      <p ref={subtitleRef}>
-        {renderText("Hey I'm Haseeb! Welcome to my ", "text-3xl font-georama ", 100)}
+    <section className='h-screen w-full relative' id='welcome'>
 
-      </p>
-      <h1 ref={titleRef} className='mt-7 '>
-        {renderText("portfolio", "text-9xl italic font-georama ")}
-      </h1>
-      <div className="small-screen ">
-        <p>this Portfolio is designed For Desktop/tablet Screen Only. </p>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center select-none flex flex-col items-center justify-center">
+        <p ref={subtitleRef} className='text-gray-200'>
+          {/* Passing base classes here, font weight handled by hook defaults */}
+          {renderText("Hey I'm Haseeb! Welcome to my ", "text-3xl font-georama font-thin")}
+        </p>
+
+        <h1 ref={titleRef} className='mt-7 text-gray-200'>
+          {renderText("portfolio", "text-9xl italic font-georama font-normal")}
+        </h1>
+      </div>
+
+      <div className="small-screen block sm:hidden absolute top-10 left-1/2 -translate-x-1/2 bg-red-300/20 backdrop-blur-lg p-3 rounded-md">
+        <p className="text-[16px] text-center font-roboto text-gray-400">
+          This Portfolio is designed For Desktop/Tablet Screen Only.
+        </p>
       </div>
 
     </section>
