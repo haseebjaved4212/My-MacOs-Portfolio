@@ -8,12 +8,12 @@ import { useGSAP } from '@gsap/react';
 const FONT_WEIGHTS = {
   subtitle: {
     min: 100,
-    max: 400,
+    max: 700,
     default: 100,
   },
   title: {
     min: 400,
-    max: 900,
+    max: 800,
     default: 400,
   }
 }
@@ -38,7 +38,7 @@ const setupTextHover = (container, type) => {
   if (!container) return;
 
   const letters = container.querySelectorAll("span");
-  const { min, max } = FONT_WEIGHTS[type];
+  const { min, max, default: defaultWeight } = FONT_WEIGHTS[type];
 
   const handleMouseMove = (e) => {
     const mouseX = e.clientX;
@@ -63,12 +63,13 @@ const setupTextHover = (container, type) => {
   };
 
   const handleMouseLeave = () => {
+    // Batch animate all letters for better performance and synchronization
     gsap.to(letters, {
-      fontWeight: min,
+      fontWeight: defaultWeight,
       color: '#e5e7eb',
       duration: 0.5,
       ease: "power2.out",
-      overwrite: 'auto'
+      overwrite: true // Force overwrite of any ongoing mousemove animations
     });
   };
 
