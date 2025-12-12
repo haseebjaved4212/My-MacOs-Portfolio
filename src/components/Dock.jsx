@@ -1,7 +1,10 @@
-import React from 'react'
-
-export const Dock = () => {
+import React, { useRef } from 'react'
+const Dock = () => {
+    const dockRef = useRef(null);
   return (
-    <div>Dock</div>
+    <section id='dock'>
+        <div ref={dockRef} className="dock-container"></div>
+    </section>
   )
 }
+export default Dock
