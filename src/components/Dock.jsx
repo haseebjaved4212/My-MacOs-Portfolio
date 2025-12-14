@@ -58,6 +58,7 @@ const Dock = () => {
 
     const toggleApp = (app) => {
         // Implement app toggle logic here
+        
 
     }
     return (
