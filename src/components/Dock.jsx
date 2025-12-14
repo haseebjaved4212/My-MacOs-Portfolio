@@ -4,6 +4,10 @@ import { dockApps } from '#constants/index.js'
 
 const Dock = () => {
     const dockRef = useRef(null);
+
+const toggleApp = (app) => {
+
+}
     return (
         <section id='dock'>
             <div ref={dockRef} className="dock-container">
@@ -14,8 +18,8 @@ const Dock = () => {
                         data-tooltip-id="dock-tooltip"
                         data-tooltip-content={name}
                         data-tooltip-delay-show={150}
-                        disabled={!canOper}
-                        onClick={() => window.open()}
+                        disabled={!canOpen}
+                        onClick={() => toggleApp({id, canOpen })}
                         ></button>
                     </div>
                 ))}
