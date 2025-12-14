@@ -3,12 +3,12 @@ import { dockApps } from '#constants/index.js'
 import { Tooltip } from 'react-tooltip'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import useWindowStore  from '#store/window.js'
+import useWindowStore from '../store/window.js'
 
 
 const Dock = () => {
 
-    const { openWindow , closeWindow , windows  } = useWindowStore();
+    const { openWindow, closeWindow, windows } = useWindowStore();
     const dockRef = useRef(null);
 
     useGSAP(() => {
@@ -28,7 +28,7 @@ const Dock = () => {
 
                 const distance = Math.abs(mouseX - center);
 
-                const intensity = Math.exp(-(distance ** 2.5 ) / 20000);
+                const intensity = Math.exp(-(distance ** 2.5) / 20000);
 
                 gsap.to(icon, {
                     scale: 1 + 0.25 * intensity,
@@ -62,17 +62,17 @@ const Dock = () => {
     const toggleApp = (app) => {
         // Implement app toggle logic here
 
-        if(!app.canOpen) return;
+        if (!app.canOpen) return;
 
         const window = windows[app.id];
 
-        if(window.isOpen) {
+        if (window.isOpen) {
             closeWindow(app.id);
         } else {
             openWindow(app.id);
         }
 
-console.log(windows);
+        console.log(windows);
     }
     return (
         <section id='dock'>
