@@ -1,5 +1,7 @@
 
 
+import WindowWrapper from "#hoc/WindowWrapper";
+
 const Terminal = () => {
     return (
         <>
@@ -22,4 +24,4 @@ const Terminal = () => {
 
 const TerminalWindow = WindowWrapper(Terminal, 'terminal');
 
-export default TerminalWindow ;
+export default TerminalWindow;

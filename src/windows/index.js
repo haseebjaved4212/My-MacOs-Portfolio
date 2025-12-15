@@ -1,3 +1,3 @@
-import Terminal from "windows/Terminal";
+import Terminal from "./Terminal";
 
-export {Terminal};
+export { Terminal };

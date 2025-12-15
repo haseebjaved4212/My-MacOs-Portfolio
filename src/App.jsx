@@ -1,7 +1,7 @@
-import { Navbar , Welcome , Dock } from '#components';
+import { Navbar, Welcome, Dock } from '#components';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
-import { Terminal } from './windows/Terminal.jsx';
+import { Terminal } from './windows';
 
 
 
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <main>
       <Navbar />
-      <Welcome /> 
+      <Welcome />
       <Dock />
 
       <Terminal />
