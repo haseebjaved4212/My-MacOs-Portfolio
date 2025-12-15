@@ -107,19 +107,19 @@ const techStack = [
   },
   {
     category: "Mobile",
-    items: ["React Native", "Expo"],
+    items: ["React Native"],
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS",  "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Python ", "Django", "FastAPI", "Flask"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: [ "MYSQL"],
   },
   {
     category: "Dev Tools",
@@ -135,22 +135,16 @@ const socials = [
     bg: "#f4656b",
     link: "https://github.com/haseebjaved4212",
   },
+  ,
   {
     id: 2,
-    text: "Platform",
-    icon: "/icons/atom.svg",
-    bg: "#4bcb63",
-    link: "https://jsmastery.com/",
-  },
-  {
-    id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
     link: "https://x.com/Haseebjaved4212?t=Be1nJmdR3ipCsHK3dylBTA&s=09",
   },
   {
-    id: 4,
+    id: 3,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
