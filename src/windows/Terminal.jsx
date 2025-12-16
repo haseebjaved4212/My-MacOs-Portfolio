@@ -2,6 +2,7 @@
 
 import WindowWrapper from "#hoc/WindowWrapper";
 import { techStack } from "#constants/index.js";
+import { Check } from "lucide-react";
 
 const Terminal = () => {
     return (
@@ -20,7 +21,7 @@ const Terminal = () => {
                     <p>Technologies</p>
                 </div>
                 <ul className="content ">
-                    {techStack.map((tech, index) => (
+                    {/* {techStack.map((tech, index) => (
                         <li key={index} className="flex items-center my-3">
                             <h3 className="w-32 font-bold text-green-600 font-roboto">{tech.category}</h3>
                             <ul className="flex flex-wrap gap-2">
@@ -28,6 +29,18 @@ const Terminal = () => {
                                     <li key={i} className="text-gray-600 font-roboto">
                                         {item}
                                     </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))} */}
+
+                    {techStack.map(({category, items })=>(
+                        <li key={category} className="flex items-center my-3">
+                            <Check  className="check  text-[#00A154] w-5" size={20}/>
+                            <h3 className="w-32 font-bold text-green-600 font-roboto">{category}</h3>
+                            <ul className="flex gap-2 font-roboto ">
+                                {items.map((item , i )=>(
+                                    <li key={i}>{item}{i !== items.length - 1 && <span>, </span>}</li>
                                 ))}
                             </ul>
                         </li>
