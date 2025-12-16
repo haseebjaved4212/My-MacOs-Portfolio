@@ -103,7 +103,7 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React.js", "Next.js", "TypeScript", "JavaScript",],
   },
   {
     category: "Mobile",
@@ -121,10 +121,12 @@ const techStack = [
     category: "Database",
     items: [ "MYSQL"],
   },
+ 
+ 
   {
-    category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
-  },
+    category: "Other",
+    items: ["Three.js", "GSAP", "Spline",  "Git", ],
+  }
 ];
 
 const socials = [
