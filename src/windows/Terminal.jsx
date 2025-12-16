@@ -7,20 +7,20 @@ import { Check, Flag } from "lucide-react";
 const Terminal = () => {
     return (
         <>
-            <div className="" id='window-header flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400'>
+            <div className="" id='window-header flex items-center justify-between px-2 py-2 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400'>
 
                 <p>Window Controls </p>
                 <h2 className="font-bold text-lg">Tech Stack </h2>
             </div>
-            <div className="tectstack p-4">
+            <div className="tectstack p-2">
                 <p>
                     <span className='font-bold'>@Haseeb %  </span> show tech stack
                 </p>
-                <div className=" flex items-center ms-5 mt-5">
+                <div className=" flex items-center ms-5 mt-2">
                     <p className="w-32 "> Category</p>
                     <p>Technologies</p>
                 </div>
-                <ul className="content  py-3 my-3 border-y border-dashed space-y-1">
+                <ul className="content  py-2 my-2 border-y border-dashed space-y-1">
                     {/* {techStack.map((tech, index) => (
                         <li key={index} className="flex items-center my-3">
                             <h3 className="w-32 font-bold text-green-600 font-roboto">{tech.category}</h3>
