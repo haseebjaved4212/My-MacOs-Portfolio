@@ -1,4 +1,5 @@
 import WindowControls from "#components/WindowControls";
+import { blogPosts } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { ChevronLeft, PanelLeft, ChevronRight,  ShieldHalf, Search, Share, Plus, Copy } from "lucide-react";
 
@@ -29,6 +30,19 @@ const Safari = () => {
             </div>
             <div className=" blog bg-white p-10 max-w-3xl mx-auto;  ">
                 <h2>My Developer Blog</h2>
+                <div className="space-y-8">
+                    {blogPosts.map((post, index) => (
+                        <div key={index} className="blog-post">
+                            <img src={post.image} alt={post.title} />
+                            <div className="content">
+                                <p>{post.date}</p>
+                                <h3>{post.title}</h3>
+                                <p>{post.description}</p>
+                                <a href={post.link} target="_blank" rel="noopener noreferrer">Read More</a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     )
