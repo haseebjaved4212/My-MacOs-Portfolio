@@ -29,7 +29,7 @@ const Safari = () => {
                 </div>
             </div>
             <div className=" blog bg-white p-10 max-w-3xl mx-auto;  ">
-                <h2>My Developer Blog</h2>
+                <h2>My Developer Portfolios</h2>
                 <div className="space-y-8">
                     {blogPosts.map((post, index) => (
                         <div key={index} className="blog-post">

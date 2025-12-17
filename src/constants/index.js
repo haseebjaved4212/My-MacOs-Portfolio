@@ -93,7 +93,7 @@ const blogPosts = [
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
+    date: "April 15, 2025",
     title: "A modern, responsive portfolio website showcasing my skills, projects, and professional experience as a Front End Developer.",
     image: "/images/My-Portfolio.png",
     link: "https://haseebjaved4212.github.io/My--Portfolio/",
