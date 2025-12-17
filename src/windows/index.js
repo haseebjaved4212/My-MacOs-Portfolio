@@ -1,4 +1,4 @@
 import Terminal from "./Terminal";
 import Safari from "./Safari";
-
-export { Terminal , Safari };
+import Resume from "./Resume";
+export { Terminal , Safari , Resume };
