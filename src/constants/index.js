@@ -80,23 +80,23 @@ const blogPosts = [
     id: 1,
     date: "Sep 2, 2025",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+      "A minimal, animated portfolio template built with GSAP and Locomotive Scroll. ",
+    image: "/images/Gsap-port.png",
+    link: "https://haseebjaved4212.github.io/Gsap-Portfolio/",
   },
   {
     id: 2,
     date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    title: "A modern, immersive, and interactive 3D portfolio website built with Next.js",
+    image: "/images/3D-port.png",
+    link: "https://3-d-dev-portfolio-rho.vercel.app/",
   },
   {
     id: 3,
     date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    title: "A modern, responsive portfolio website showcasing my skills, projects, and professional experience as a Front End Developer.",
+    image: "/images/My-Portfolio.png",
+    link: "https://haseebjaved4212.github.io/My--Portfolio/",
   },
 ];
 
