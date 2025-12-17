@@ -35,10 +35,10 @@ const Safari = () => {
                         <div key={index} className="blog-post">
                             <img src={post.image} alt={post.title} />
                             <div className="content">
-                                <p>{post.date}</p>
-                                <h3>{post.title}</h3>
-                                <p>{post.description}</p>
-                                <a href={post.link} target="_blank" rel="noopener noreferrer">Read More</a>
+                                <p className="m-2">{post.date}</p>
+                                <h3 className="m-2">{post.title}</h3>
+                              
+                                <a href={post.link} target="_blank" rel="noopener noreferrer" className="m-2">See It In Action</a>
                             </div>
                         </div>
                     ))}
