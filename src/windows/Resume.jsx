@@ -1,6 +1,15 @@
 import { WindowControls } from '#components/index.js'
 import WindowWrapper from '#hoc/WindowWrapper'
 import { Download } from 'lucide-react';
+import { Document, Page, pdfjs } from 'react-pdf';
+
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
+).toString();
+
 const Resume = () => {
     return (
         <>
@@ -8,11 +17,15 @@ const Resume = () => {
 
                 <WindowControls target="resume" />
                 <h2>Resume.pdf</h2>
-                <a href="files/My_Resume.pdf" title='Download Resume' download="My_Resume.pdf" className='cursor-pointer'>
+                <a href="files/My_Resume.pdf" title='Download Resume' download="MY_Resume.pdf" className='cursor-pointer'>
                     <Download className="p-1 hover:bg-gray-200 rounded hover:cursor-default" /></a>
 
 
             </div>
+            <Document file="files/MY_Resume.pdf" >
+                <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
+            </Document>
+
         </>
     )
 }
