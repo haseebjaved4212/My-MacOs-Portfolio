@@ -275,7 +275,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "AI Image Enhancer",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -283,16 +283,20 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "AI Image Enhancer.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-            "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-            "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-            "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+            "A modern web application that allows users to upload images and enhance them using AI technology.",
+            " Built with React, Vite, TailwindCSS, and integrates with the PicWish photo-enhancement API.",
+            "Features:",  
+            "AI-Powered Image Enhancement: Upload an image and enhance it via an external AI API.",
+            "Live Preview: See both the original and enhanced images side by side.",
+            "Loading State: Visual feedback while processing.",
+            "Responsive UI: Built with TailwindCSS for modern, mobile-friendly design.",
+            "Mock Mode: Develop UI without consuming API credits.",
           ],
         },
         {
