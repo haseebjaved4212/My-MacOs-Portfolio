@@ -293,9 +293,7 @@ const WORK_LOCATION = {
             "Features:",  
             "AI-Powered Image Enhancement: Upload an image and enhance it via an external AI API.",
             "Live Preview: See both the original and enhanced images side by side.",
-            "Loading State: Visual feedback while processing.",
             "Responsive UI: Built with TailwindCSS for modern, mobile-friendly design.",
-            "Mock Mode: Develop UI without consuming API credits.",
           ],
         },
         {
