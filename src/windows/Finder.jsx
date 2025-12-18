@@ -4,12 +4,15 @@ import { Search } from "lucide-react"
 import WindowWrapper from "#hoc/WindowWrapper"
 import useLocationStore from "#store/location"
 import clsx from "clsx";
+import useWindowStore from "#store/window.js"
 
 const Finder = () => {
+  const {openWindow} = useWindowStore();
   const { activeLocations: activeLocation, setActiveLocation } = useLocationStore();
 
   const openItem = (item) => {
-    
+  if(item.fileType === "pdf") return openWindow("resume")
+
   }
 
   const renderList = (name, items) =>
@@ -43,30 +46,22 @@ const Finder = () => {
 
 
 
-          {renderList("Work", locations.work.children)}
+          {renderList("My Projects", locations.work.children)}
 
 
         </div>
-<ul className="col-span-10 space-y-3">
-        {activeLocation ?.children.map((item) =>(
-          <li key={item.id} className={item.position} onClick={() => openItem(item)}>
-            <img src={item.icon} alt={item.name} />
-            <p className="text-sm font-medium truncate">{item.name}</p>
-          </li>
-        ))}
+        <ul className="col-span-10 space-y-3">
+          {activeLocation?.children.map((item) => (
+            <li key={item.id} className={item.position} onClick={() => openItem(item)}>
+              <img src={item.icon} alt={item.name} />
+              <p className="text-sm font-medium truncate">{item.name}</p>
+            </li>
+          ))}
 
-      </ul>
+        </ul>
 
       </div>
-      {/* <ul className="col-span-10 space-y-3">
-        {activeLocation ?.children.map((item) =>(
-          <li key={item.id} className={item.position} onClick={() => openItem(item)}>
-            <img src={item.icon} alt={item.name} />
-            <p className="text-sm font-medium truncate">{item.name}</p>
-          </li>
-        ))}
 
-      </ul> */}
 
 
     </>
