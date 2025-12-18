@@ -3,9 +3,10 @@ import { locations } from "#constants"
 import { Search } from "lucide-react"
 import WindowWrapper from "#hoc/WindowWrapper"
 import useLocationStore from "#store/location"
+import clsx from "clsx";
 
 const Finder = () => {
-const {activeLocation, setActiveLocation} = useLocationStore;
+  const { activeLocations: activeLocation, setActiveLocation } = useLocationStore();
   return (
     <>
 
@@ -21,22 +22,23 @@ const {activeLocation, setActiveLocation} = useLocationStore;
             <h3>Favorites</h3>
             <ul>
               {Object.values(locations).map((item) => (
-                <li key={item.id} onClick={() => setActiveLocation(item)}>
-                  <img src={item.icon} alt={item.name} className="w-4 "/>
+                <li key={item.id} onClick={() => setActiveLocation(item)}
+                  className={clsx(item.id === activeLocation.id ? "active" : "not-active")}>
+                  <img src={item.icon} alt={item.name} className="w-4" />
                   <p className="text-sm font-medium truncate">{item.name}</p>
                 </li>
               ))}
             </ul>
-            
-            </div> <div className="">
+
+          </div> <div className="">
             <h3>Work</h3>
             <ul>
               ...
             </ul>
-            
-            </div>
-            
-            </div>
+
+          </div>
+
+        </div>
 
       </div>
     </>
