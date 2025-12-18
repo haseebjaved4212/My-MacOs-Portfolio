@@ -236,10 +236,9 @@ const WORK_LOCATION = {
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "A lightweight static Ramadan website that shows live time/date.",
+            "lets users pick country and city, and displays daily prayer times fetched from public APIs",
+            "It's built with Html, Css and JavaScript, ensuring fast performance, responsive design, and a clean, premium look.",
           ],
         },
         {
@@ -332,7 +331,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "3D Portfolio",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -340,21 +339,19 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "3D Portfolio.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "A modern, immersive, and interactive 3D portfolio website built with Next.js, Three.js, and TailwindCSS.",
+            "This project showcases a developer's skills, projects, and experience using cutting-edge web technologies and beautiful 3D visuals",
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "3D Portfolio.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -363,7 +360,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "3D Portfolio.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -372,7 +369,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "3D Portfolio.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
