@@ -243,7 +243,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "Prayer Times Application.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -252,7 +252,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "Prayer Times Application.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -261,7 +261,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "Prayer Times Application.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",
@@ -300,7 +300,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "Ai Image Enhancer.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -309,7 +309,7 @@ const WORK_LOCATION = {
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "Ai Image Enhancer.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -318,7 +318,7 @@ const WORK_LOCATION = {
         },
         {
           id: 5,
-          name: "Design.fig",
+          name: "Ai Image Enhancer.fig",
           icon: "/images/plain.png",
           kind: "file",
           fileType: "fig",

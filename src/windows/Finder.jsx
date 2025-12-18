@@ -8,6 +8,10 @@ import clsx from "clsx";
 const Finder = () => {
   const { activeLocations: activeLocation, setActiveLocation } = useLocationStore();
 
+  const openItem = (item) => {
+    
+  }
+
   const renderList = (name, items) =>
     <div className="flex flex-col">
       <h3>{name}</h3>
@@ -43,11 +47,26 @@ const Finder = () => {
 
 
         </div>
-
-      </div>
-      <ul className="col-span-10 space-y-3">
+<ul className="col-span-10 space-y-3">
+        {activeLocation ?.children.map((item) =>(
+          <li key={item.id} className={item.position} onClick={() => openItem(item)}>
+            <img src={item.icon} alt={item.name} />
+            <p className="text-sm font-medium truncate">{item.name}</p>
+          </li>
+        ))}
 
       </ul>
+
+      </div>
+      {/* <ul className="col-span-10 space-y-3">
+        {activeLocation ?.children.map((item) =>(
+          <li key={item.id} className={item.position} onClick={() => openItem(item)}>
+            <img src={item.icon} alt={item.name} />
+            <p className="text-sm font-medium truncate">{item.name}</p>
+          </li>
+        ))}
+
+      </ul> */}
 
 
     </>
