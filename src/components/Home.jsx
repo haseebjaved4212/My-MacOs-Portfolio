@@ -31,11 +31,11 @@ const Home = () => {
 
   return (
     <section id="home" className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
-      <ul className="w-full h-full relative pointer-events-auto">
+      <ul className="w-full h-full relative pointer-events-none">
         {projects.map((project) => (
           <li
             key={project.id}
-            className={clsx("desktop-icon absolute flex flex-col items-center justify-center gap-1 w-24 cursor-pointer p-2 rounded hover:bg-white/20 transition-colors", project.windowPosition)}
+            className={clsx("desktop-icon absolute flex flex-col items-center justify-center gap-1 w-24 cursor-pointer p-2 rounded hover:bg-white/20 transition-colors pointer-events-auto", project.windowPosition)}
             onDoubleClick={() => handleOpen(project)}
           >
             <img src={project.icon || "/images/folder.png"} alt={project.name} className="w-14 h-14 object-contain drop-shadow-lg" />
