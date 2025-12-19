@@ -152,6 +152,27 @@ const socials = [
     bg: "#05b6f6",
     link: "https://www.linkedin.com/in/haseeb-javed-0332b3341",
   },
+  {
+    id: 4,
+    text: "Instagram",
+    icon: "/icons/instagram.svg",
+    bg: "#DE3163",
+    link: "https://www.instagram.com/haseeb_javed4212?igsh=MTV0cWI2aHh2dDRmbw==",
+  },
+  {
+    id: 5,
+    text: "Reddit",
+    icon: "/icons/reddit.svg",
+    bg: "#DE3163",
+    link: "https://www.instagram.com/haseeb_javed4212?igsh=MTV0cWI2aHh2dDRmbw==",
+  },
+  {
+    id: 6,
+    text: "Facebook",
+    icon: "/icons/facebook.svg",
+    bg: "#4169E1",
+    link: "https://www.facebook.com/share/1BU3pcCN8W/",
+  },
 ];
 
 const photosLinks = [
