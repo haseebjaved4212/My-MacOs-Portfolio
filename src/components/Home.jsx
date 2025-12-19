@@ -1,5 +1,5 @@
 
-import { locations, projects } from '#constants';
+import { locations } from '#constants';
 
 const projects = locations.work?.children ?? [];
 

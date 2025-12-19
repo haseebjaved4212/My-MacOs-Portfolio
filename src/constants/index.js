@@ -408,7 +408,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-10 left-5",
-      imageUrl: "/images/adrian.jpg",
+      imageUrl: "/images/Haseeb-3.jpeg",
     },
     {
       id: 2,
@@ -417,7 +417,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-28 right-72",
-      imageUrl: "/images/adrian-2.jpg",
+      imageUrl: "/images/Haseeb-1.jpeg",
     },
     {
       id: 3,
@@ -426,7 +426,7 @@ const ABOUT_LOCATION = {
       kind: "file",
       fileType: "img",
       position: "top-52 left-80",
-      imageUrl: "/images/adrian-3.jpeg",
+      imageUrl: "/images/Haseeb-2.jpeg",
     },
     {
       id: 4,
@@ -436,7 +436,7 @@ const ABOUT_LOCATION = {
       fileType: "txt",
       position: "top-60 left-5",
       subtitle: "Meet the Developer Behind the Code",
-      image: "/images/adrian.jpg",
+      image: "/images/Haseeb-3.jpeg",
       description: [
         "Hi, I’m Haseeb. Think of me as a Full-Stack Architect with a Frontend soul.",
         "I specialize in building high-fidelity interfaces using Next.js and TypeScript, pushing the limits of the browser with GSAP, Three.js, and Spline.",
