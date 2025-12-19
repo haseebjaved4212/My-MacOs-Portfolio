@@ -159,15 +159,9 @@ const socials = [
     bg: "#DE3163",
     link: "https://www.instagram.com/haseeb_javed4212?igsh=MTV0cWI2aHh2dDRmbw==",
   },
+ 
   {
     id: 5,
-    text: "Reddit",
-    icon: "/icons/reddit.svg",
-    bg: "#DE3163",
-    link: "https://www.instagram.com/haseeb_javed4212?igsh=MTV0cWI2aHh2dDRmbw==",
-  },
-  {
-    id: 6,
     text: "Facebook",
     icon: "/icons/facebook.svg",
     bg: "#4169E1",
