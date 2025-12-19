@@ -1,8 +1,21 @@
 
+import { locations, projects } from '#constants';
+
+const projects = locations.work?.children ?? [];
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <section id="home">
+        <ul>
+            {projects.map((project) => (
+                <li key={project.id}>
+                    <img src={project.image} alt={project.title} />
+                    <h2>{project.title}</h2>
+                    <p>{project.description}</p>
+                </li>
+            ))  }
+        </ul>
+    </section>
   )
 }
 
