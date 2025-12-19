@@ -17,6 +17,7 @@ const App = () => {
       <Welcome />
       <Dock />
 
+
       <Terminal />
       <Safari />
       <Resume />
@@ -25,6 +26,7 @@ const App = () => {
       <Image />
       <Contact />
       <Home />
+
     </main>
   )
 }
