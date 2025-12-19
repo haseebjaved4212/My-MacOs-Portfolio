@@ -16,19 +16,19 @@ const Text = () => {
                     <span className="font-medium text-gray-600 ml-4 text-sm">{data.name}</span>
                 </div>
             </div>
-            <div className="p-8 overflow-y-auto max-w-3xl min-w-[500px]">
+            <div className="p-8 overflow-y-auto w-full max-w-3xl min-w-[300px] md:min-w-[500px]">
                 <div className="flex items-center gap-4 mb-6">
                     {data.icon && <img src={data.icon} alt="icon" className="w-16 h-16 object-contain" />}
                     <div>
                         <h1 className="text-xl font-bold text-gray-900">{data.name}</h1>
-                        {data.subtitle && <p className="text-sm text-gray-500 mt-1">{data.subtitle}</p>}
+                        {data.subtitle && <p className="text-sm text-gray-500 mt-1 p-2">{data.subtitle}</p>}
                     </div>
                 </div>
 
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-gray-700 leading-relaxed break-words pr-4 mr-4">
                     {data.description && Array.isArray(data.description) ?
                         data.description.map((para, i) => <p key={i}>{para}</p>) :
-                        (data.description && <p>{data.description}</p>)
+                        (data.description && <p className="p-2">{data.description}</p>)
                     }
                 </div>
             </div>
