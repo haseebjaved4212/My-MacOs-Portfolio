@@ -3,9 +3,11 @@ import React from 'react';
 import { photosLinks, gallery } from '#constants';
 import WindowWrapper from '#hoc/WindowWrapper';
 import WindowControls from '#components/WindowControls';
+import useWindowStore from "#store/window.js";
 import { clsx } from 'clsx';
 
 const Photos = () => {
+    const { openWindow } = useWindowStore();
     return (
         <div className='flex flex-col h-full bg-white rounded-lg shadow-xl overflow-hidden'>
             {/* Header */}
@@ -51,7 +53,11 @@ const Photos = () => {
 
                     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
                         {gallery.map((photo) => (
-                            <div key={photo.id} className='aspect-square rounded-lg overflow-hidden relative group cursor-pointer shadow-sm border border-gray-100'>
+                            <div
+                                key={photo.id}
+                                className='aspect-square rounded-lg overflow-hidden relative group cursor-pointer shadow-sm border border-gray-100'
+                                onClick={() => openWindow("imgfile", { imageUrl: photo.img, name: `Photo ${photo.id}` })}
+                            >
                                 <img
                                     src={photo.img}
                                     alt={`Gallery item ${photo.id}`}
