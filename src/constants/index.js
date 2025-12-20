@@ -39,37 +39,37 @@ const navIcons = [
 const dockApps = [
   {
     id: "finder",
-    name: "Portfolio", // was "Finder"
+    name: "Finder",
     icon: "finder.png",
     canOpen: true,
   },
   {
     id: "safari",
-    name: "Articles", // was "Safari"
+    name: "Portfolios",
     icon: "safari.png",
     canOpen: true,
   },
   {
     id: "photos",
-    name: "Gallery", // was "Photos"
+    name: "Photos",
     icon: "photos.png",
     canOpen: true,
   },
   {
     id: "contact",
-    name: "Contact", // or "Get in touch"
+    name: "Contact",
     icon: "contact.png",
     canOpen: true,
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "Terminal",
     icon: "terminal.png",
     canOpen: true,
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
+    name: "Trash",
     icon: "trash.png",
     canOpen: false,
   },
@@ -111,7 +111,7 @@ const techStack = [
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS",  "CSS"],
+    items: ["Tailwind CSS", "CSS"],
   },
   {
     category: "Backend",
@@ -119,13 +119,13 @@ const techStack = [
   },
   {
     category: "Database",
-    items: [ "MYSQL"],
+    items: ["MYSQL"],
   },
- 
- 
+
+
   {
     category: "Other",
-    items: ["Three.js", "GSAP", "Spline",  "Git", ],
+    items: ["Three.js", "GSAP", "Spline", "Git",],
   }
 ];
 
@@ -159,7 +159,7 @@ const socials = [
     bg: "#DE3163",
     link: "https://www.instagram.com/haseeb_javed4212?igsh=MTV0cWI2aHh2dDRmbw==",
   },
- 
+
   {
     id: 5,
     text: "Facebook",
@@ -312,7 +312,7 @@ const WORK_LOCATION = {
           description: [
             "A modern web application that allows users to upload images and enhance them using AI technology.",
             " Built with React, Vite, TailwindCSS, and integrates with the PicWish photo-enhancement API.",
-            "Features:",  
+            "Features:",
             "AI-Powered Image Enhancement: Upload an image and enhance it via an external AI API.",
             "Live Preview: See both the original and enhanced images side by side.",
             "Responsive UI: Built with TailwindCSS for modern, mobile-friendly design.",
@@ -447,7 +447,7 @@ const ABOUT_LOCATION = {
       description: [
         "Hi, I’m Haseeb. Think of me as a Full-Stack Architect with a Frontend soul.",
         "I specialize in building high-fidelity interfaces using Next.js and TypeScript, pushing the limits of the browser with GSAP, Three.js, and Spline.",
-        "My technical DNA goes deeper than the UI—I have a solid foundation in Computer Networking, DevOps, and AI/ML basics.",
+        "My technical DNA goes deeper than the UI. I have a solid foundation in Computer Networking, DevOps, and AI/ML basics.",
         "Whether I’m automating workflows or architecting 3D environments, I build with precision and performance in mind.",
         "Currently, I’m 'upgrading' my system by mastering Python to build smarter, more powerful backends.",
       ],
