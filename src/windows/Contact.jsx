@@ -46,12 +46,12 @@ const Contact = () => {
                     )}
                 </div>
 
-                <ul className="grid grid-cols-2 gap-2">
+                <ul className='grid grid-cols-2 gap-4'>
                     {socials.map(({ id, bg, link, icon, text }) => (
-                        <li key={id} style={{ backgroundColor: bg }} className="rounded-md overflow-hidden hover:opacity-90 transition-opacity">
-                            <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 px-3">
-                                <img src={icon} alt={text} className='size-5 brightness-0 invert' />
-                                <p className="text-white text-xs font-medium">{text}</p>
+                        <li key={id} style={{ backgroundColor: bg }} className="rounded-xl overflow-hidden hover:scale-[1.02] transition-transform shadow-sm h-24">
+                            <a href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-between p-4 h-full">
+                                <img src={icon} alt={text} className='size-6 text-white' />
+                                <p className="text-white text-sm font-bold tracking-wide">{text}</p>
                             </a>
                         </li>
                     ))}

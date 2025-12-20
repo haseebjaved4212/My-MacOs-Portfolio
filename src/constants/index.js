@@ -134,7 +134,7 @@ const socials = [
     id: 1,
     text: "Github",
     icon: "/icons/github.svg",
-    bg: "#f4656b",
+    bg: "#2a2424ff",
     link: "https://github.com/haseebjaved4212",
   },
   ,
@@ -142,14 +142,14 @@ const socials = [
     id: 2,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
-    bg: "#ff866b",
+    bg: "#1DA1F2",
     link: "https://x.com/Haseebjaved4212?t=Be1nJmdR3ipCsHK3dylBTA&s=09",
   },
   {
     id: 3,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
+    bg: "#0077B6",
     link: "https://www.linkedin.com/in/haseeb-javed-0332b3341",
   },
   {
@@ -166,6 +166,13 @@ const socials = [
     icon: "/icons/facebook.svg",
     bg: "#4169E1",
     link: "https://www.facebook.com/share/1BU3pcCN8W/",
+  },
+  {
+    id: 6,
+    text: "Reddit",
+    icon: "/icons/reddit.svg",
+    bg: "#C4483B",
+    link: "https://www.reddit.com/u/Haseeb4212/s/DqFxYkvD1V",
   },
 ];
 
